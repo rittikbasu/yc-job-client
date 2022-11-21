@@ -66,7 +66,7 @@ export default function Table(data) {
     return string.replace(/\(YC\s\S+/, "");
   }
   return (
-    <div className="container mx-auto px-4 sm:px-8">
+    <div className="container mx-auto px-4 sm:px-8 mb-10">
       <div className="py-4">
         <div className="flex justify-center md:justify-between items-center">
           <h2 className="text-3xl font-semibold leading-tight text-orange-400  tracking-widest md:tracking-wider">
@@ -204,13 +204,13 @@ function Navigation({
             <div className="inline-flex mt-2 xs:mt-0">
               <button
                 onClick={prevPage}
-                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l"
+                className="text-sm bg-gray-200 md:hover:bg-gray-300 text-gray-800 font-semibold py-2 px-8 rounded-l"
               >
                 Prev
               </button>
               <button
                 onClick={nextPage}
-                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r"
+                className="text-sm border-l border-orange-400 bg-gray-200 md:hover:bg-gray-300 text-gray-800 font-semibold py-2 px-8 rounded-r"
               >
                 Next
               </button>
