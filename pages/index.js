@@ -5,7 +5,9 @@ export default function Home({ data }) {
   data.sort((a, b) => {
     return new Date(b.time) - new Date(a.time);
   });
-  console.log(data.length);
+  // data.map((item) => {
+  //   console.log(item.url);
+  // });
   return <Table data={data} />;
 }
 
@@ -25,10 +27,16 @@ export const getStaticProps = async () => {
     const job = await jobRes.json();
     data.push(job);
   });
-  await sleep(300);
-  while (data.length < 50) {
-    await sleep(50);
-  }
+  await sleep(500);
+  // while (data.length < 10) {
+  //   await sleep(50);
+  // }
+  // loop over data and if url is undefined, change it to null
+  data.map((item) => {
+    if (item.url === undefined) {
+      item.url = `https://news.ycombinator.com/item?id=${item.id}`;
+    }
+  });
 
   return {
     props: {
