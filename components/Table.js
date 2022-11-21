@@ -50,9 +50,6 @@ export default function Table(data) {
     }, 200);
   }
 
-  // regex to get YC something from text
-  // const regex = /YC\s\S+/g;
-
   function getBatch(string) {
     const regex = /YC\s\S+/g;
     const match = string.match(regex);
@@ -84,7 +81,7 @@ export default function Table(data) {
             <div className="relative">
               <select
                 onChange={handleItemCount}
-                className="h-full rounded-l md:rounded border block appearance-none w-full bg-grey-100 border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none"
+                className="h-full rounded-l md:rounded border block appearance-none w-full bg-grey-100 border-gray-300 text-gray-600 py-2 px-4 pr-8 leading-tight focus:outline-none"
               >
                 <option value="10">Show 10</option>
                 <option value="20">Show 20</option>
@@ -102,7 +99,7 @@ export default function Table(data) {
             <input
               placeholder="Search"
               onChange={handleSearch}
-              className="appearance-none rounded-r md:rounded border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+              className="appearance-none rounded-r md:rounded border-y border-r md:border-x border-gray-300 block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
             />
           </div>
         </div>
