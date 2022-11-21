@@ -6,18 +6,14 @@ export default function Home({ data }) {
   data.sort((a, b) => {
     return new Date(b.time) - new Date(a.time);
   });
-  // data.map((item) => {
-  //   console.log(item.url);
-  // });
-  // console.log(jobs);
   return <Table data={data} />;
 }
 
 export const getStaticProps = async () => {
-  const allJobsres = await fetch(
+  const allJobsRes = await fetch(
     "https://hacker-news.firebaseio.com/v0/jobstories.json?"
   );
-  const allJobsArr = await allJobsres.json();
+  const allJobsArr = await allJobsRes.json();
   const data = [];
 
   const jobs = allJobsArr.map(async (id) => {
@@ -28,7 +24,7 @@ export const getStaticProps = async () => {
   });
   await sleep(500);
 
-  // loop over data and if url is undefined, change it to null
+  // loop over data and if url is undefined, change it to the url of the job post
   data.map((item) => {
     if (item.url === undefined) {
       item.url = `https://news.ycombinator.com/item?id=${item.id}`;
@@ -38,7 +34,6 @@ export const getStaticProps = async () => {
   return {
     props: {
       data: data,
-      // jobs: allJobs,
     },
     revalidate: 1,
   };
