@@ -8,6 +8,7 @@ export default function Home({ data }) {
   // data.map((item) => {
   //   console.log(item.url);
   // });
+  // console.log(jobs);
   return <Table data={data} />;
 }
 
@@ -27,7 +28,7 @@ export const getStaticProps = async () => {
     const job = await jobRes.json();
     data.push(job);
   });
-  await sleep(500);
+  // await sleep(500);
   // while (data.length < 10) {
   //   await sleep(50);
   // }
@@ -41,6 +42,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       data: data,
+      // jobs: allJobs,
     },
     revalidate: 1,
   };
