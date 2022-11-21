@@ -1,5 +1,5 @@
 import Table from "../components/Table.js";
-import sleep from "../util/sleep.js";
+import sleep from "../utils/sleep.js";
 
 export default function Home({ data }) {
   // sort objects in data by time
