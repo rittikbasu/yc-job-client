@@ -1,9 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export default async function handler(req, res) {
   const maxPostsRes = await fetch(
     "https://hacker-news.firebaseio.com/v0/maxitem.json"
