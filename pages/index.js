@@ -1,12 +1,18 @@
 import Table from "../components/Table.js";
 import sleep from "../utils/sleep.js";
+import Footer from "../components/Footer.js";
 
 export default function Home({ data }) {
   // sort objects in data by time
   data.sort((a, b) => {
     return new Date(b.time) - new Date(a.time);
   });
-  return <Table data={data} />;
+  return (
+    <div className="h-screen">
+      <Table data={data} />
+      <Footer />
+    </div>
+  );
 }
 
 export const getStaticProps = async () => {
