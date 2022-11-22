@@ -1,4 +1,5 @@
 # A job client for Hacker News
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/rittik)
 
 ![screenshot of the website](https://ik.imagekit.io/zwcfsadeijm/yc-job-client_lqA7bHbtq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669122813353)
 
