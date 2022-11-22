@@ -45,6 +45,6 @@ The goal of this project was to create a simple and efficient way for users to f
    ```
    
 [Next.js]: https://img.shields.io/badge/Next_JS-20232A?style=for-the-badge&logo=next.js&logoColor=white
-[Next-url]: https://reactjs.org/
+[Next-url]: https://nextjs.org/
 [Tailwind.com]: https://img.shields.io/badge/Tailwind-white?style=for-the-badge&logo=tailwindcss&logoColor=blue
-[Tailwind-url]: https://getbootstrap.com
+[Tailwind-url]: https://tailwindcss.com/
