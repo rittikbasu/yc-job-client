@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# A job client for Hacker News
 
-## Getting Started
+![screenshot of the website](https://ik.imagekit.io/zwcfsadeijm/yc-job-client_lqA7bHbtq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669122813353)
 
-First, run the development server:
+## What is it?
+A fast and lightweight job client for Hacker News consisting of Y Combinator backed startups. It is minimal by design and focused on displaying job postings in a concise and readable manner, making it easy for users to find the jobs they are interested in. This application is built with Next.js using the [Hacker News API](https://github.com/HackerNews/API). It uses getStaticProps to fetch data at build time and therefore works as a static site. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The goal of this project was to create a simple and efficient way for users to find jobs at startups.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How it works?
+![flow of the project](https://ik.imagekit.io/zwcfsadeijm/job-client-excalidraw_ks36ZesrcR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669124802340)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Built With
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+[![Next][Next.js]][Next-url]
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[![Tailwind][Tailwind.com]][Tailwind-url]
 
-## Learn More
+## How to set up and run the project?
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/rittikbasu/yc-job-client.git
+   ```
+2. cd in to the directory
+   ```sh
+   cd yc-job-client
+   ```
+3. Install the required packages
+   ```sh
+   npm install
+   ```
+4. Run the project on your localhost
+   ```sh
+   npm run dev
+   ```
+   
+[Next.js]: https://img.shields.io/badge/Next_JS-20232A?style=for-the-badge&logo=next.js&logoColor=white
+[Next-url]: https://reactjs.org/
+[Tailwind.com]: https://img.shields.io/badge/Tailwind-white?style=for-the-badge&logo=tailwindcss&logoColor=blue
+[Tailwind-url]: https://getbootstrap.com
