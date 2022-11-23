@@ -49,22 +49,6 @@ export default function Table(data) {
       setJobData(filteredData);
     }, 200);
   }
-
-  function getBatch(string) {
-    const regex = /YC\s\S+/g;
-    const match = string.match(regex);
-    if (match) {
-      return match[0]
-        .replace(")", "")
-        .replace("YC", "")
-        .replace(",", "");
-    } else {
-      return "";
-    }
-  }
-  function removeBatchFromTitle(string) {
-    return string.replace(/\(YC\s\S+/, "");
-  }
   return (
     <div className="container mx-auto px-4 sm:px-8 mb-10">
       <div className="py-4">
@@ -121,7 +105,7 @@ export default function Table(data) {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm md:text-center md:table-cell hidden">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {removeBatchFromTitle(job.title)}
+                          {job.title}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm md:text-center decoration-blue-500 md:hidden">
@@ -129,7 +113,7 @@ export default function Table(data) {
                           href={job.url}
                           className="text-gray-900 whitespace-no-wrap underline"
                         >
-                          {removeBatchFromTitle(job.title)}
+                          {job.title}
                         </Link>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
@@ -140,14 +124,14 @@ export default function Table(data) {
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm  hidden md:table-cell text-center">
-                        {getBatch(job.title) && (
+                        {job.title && (
                           <span className="relative inline-block px-3 py-1 font-semibold text-orange-600 leading-tight whitespace-no-wrap">
                             <span
                               aria-hidden
                               className="absolute inset-0 bg-orange-200 opacity-50 rounded-full"
                             ></span>
                             <span className="relative">
-                              {getBatch(job.title)}
+                              {job.batch}
                             </span>
                           </span>
                         )}
@@ -210,7 +194,7 @@ function Navigation({
               </button>
               <button
                 onClick={nextPage}
-                className="text-sm border-l border-orange-400 bg-gray-200 md:hover:bg-gray-300 text-gray-800 font-semibold py-2 px-8 rounded-r"
+                className="text-sm border-l border-orange-300 bg-gray-200 md:hover:bg-gray-300 text-gray-800 font-semibold py-2 px-8 rounded-r"
               >
                 Next
               </button>
@@ -219,7 +203,7 @@ function Navigation({
         </div>
       ) : (
         <div className="text-center text-2xl text-gray-500">
-          No Data Found
+          No Jobs Found
         </div>
       )}
     </Fragment>

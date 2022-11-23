@@ -1,6 +1,7 @@
 import Table from "../components/Table.js";
 import sleep from "../utils/sleep.js";
 import Footer from "../components/Footer.js";
+import { getBatch, removeBatchFromTitle } from "../utils/regex.js";
 
 export default function Home({ data }) {
   // sort objects in data by time
@@ -31,10 +32,12 @@ export const getStaticProps = async () => {
   await sleep(500);
 
   // loop over data and if url is undefined, change it to the url of the job post
-  data.map((item) => {
-    if (item.url === undefined) {
-      item.url = `https://news.ycombinator.com/item?id=${item.id}`;
-    }
+  data.map((job) => {
+    job.batch = getBatch(job.title);
+    job.title = removeBatchFromTitle(job.title);
+    job.url = job.url
+      ? job.url
+      : `https://news.ycombinator.com/item?id=${job.id}`;
   });
 
   return {
