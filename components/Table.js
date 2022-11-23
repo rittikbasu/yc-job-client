@@ -3,6 +3,7 @@ import Link from "next/link";
 import SearchAndFilter from "./SearchAndFilter";
 import Moment from "react-moment";
 import clsx from "clsx";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function Table(data) {
   const [currentPage, setCurrentPage] = useState(1);

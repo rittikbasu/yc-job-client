@@ -1,5 +1,4 @@
 import { HiChevronDown, HiSearch } from "react-icons/hi";
-import { FiExternalLink } from "react-icons/fi";
 
 export default function SearchAndFilter({
   handleSearch,
