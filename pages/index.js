@@ -14,8 +14,8 @@ export default function Home({ data }) {
       <div className="py-4">
         <Navbar />
         <Table data={data} />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
