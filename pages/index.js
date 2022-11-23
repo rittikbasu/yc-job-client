@@ -1,7 +1,8 @@
-import Table from "../components/Table.js";
-import sleep from "../utils/sleep.js";
-import Footer from "../components/Footer.js";
-import { getBatch, removeBatchFromTitle } from "../utils/regex.js";
+import Table from "../components/Table";
+import sleep from "../utils/sleep";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import { getBatch, removeBatchFromTitle } from "../utils/regex";
 
 export default function Home({ data }) {
   // sort objects in data by time
@@ -9,9 +10,12 @@ export default function Home({ data }) {
     return new Date(b.time) - new Date(a.time);
   });
   return (
-    <div className="h-screen">
-      <Table data={data} />
-      <Footer />
+    <div className="h-screen container mx-auto px-4 sm:px-8">
+      <div className="py-4">
+        <Navbar />
+        <Table data={data} />
+        <Footer />
+      </div>
     </div>
   );
 }
